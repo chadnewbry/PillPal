@@ -23,6 +23,10 @@
 		AA000106 /* UserSettings+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000116; };
 		AA000107 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000117; };
 		AA000108 /* MedicationDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000118; };
+		AA000120 /* DailyProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000130; };
+		AA000121 /* TimeOfDaySectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000131; };
+		AA000122 /* MedicationCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000132; };
+		AA000123 /* AddMedicationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000133; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +47,10 @@
 		AA000116 /* UserSettings+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserSettings+Extensions.swift"; sourceTree = "<group>"; };
 		AA000117 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		AA000118 /* MedicationDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationDataService.swift; sourceTree = "<group>"; };
+		AA000130 /* DailyProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyProgressView.swift; sourceTree = "<group>"; };
+		AA000131 /* TimeOfDaySectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeOfDaySectionView.swift; sourceTree = "<group>"; };
+		AA000132 /* MedicationCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationCardView.swift; sourceTree = "<group>"; };
+		AA000133 /* AddMedicationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMedicationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +108,10 @@
 			isa = PBXGroup;
 			children = (
 				AA000013 /* TodayView.swift */,
+				AA000130 /* DailyProgressView.swift */,
+				AA000131 /* TimeOfDaySectionView.swift */,
+				AA000132 /* MedicationCardView.swift */,
+				AA000133 /* AddMedicationView.swift */,
 			);
 			path = Today;
 			sourceTree = "<group>";
@@ -226,6 +238,10 @@
 				AA000004 /* WeekViewTab.swift in Sources */,
 				AA000005 /* HistoryView.swift in Sources */,
 				AA000006 /* SettingsView.swift in Sources */,
+				AA000120 /* DailyProgressView.swift in Sources */,
+				AA000121 /* TimeOfDaySectionView.swift in Sources */,
+				AA000122 /* MedicationCardView.swift in Sources */,
+				AA000123 /* AddMedicationView.swift in Sources */,
 				AA000008 /* PillPal.xcdatamodeld in Sources */,
 				AA000101 /* MedicationEnums.swift in Sources */,
 				AA000102 /* Medication+Extensions.swift in Sources */,
