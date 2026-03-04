@@ -679,7 +679,7 @@ struct DetailDoseCard: View {
 
 // MARK: - DayOfWeek Identifiable for Sheet
 
-extension DayOfWeek: @retroactive Hashable {}
+extension DayOfWeek: Hashable {}
 
 // MARK: - Preview
 

@@ -43,6 +43,9 @@ struct DailyProgressView: View {
         .frame(maxWidth: .infinity)
         .background(.background, in: RoundedRectangle(cornerRadius: 20))
         .shadow(color: .black.opacity(0.05), radius: 6, y: 3)
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel("Daily progress: \(taken) of \(total) medications taken, \(Int(progress * 100)) percent complete")
+        .accessibilityIdentifier("daily_progress")
     }
 
     private var progressColor: Color {
