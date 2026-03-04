@@ -40,6 +40,8 @@ struct TodayView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @StateObject private var dataService = MedicationDataService()
     @State private var doses: [Dose] = []
+    @EnvironmentObject private var storeManager: StoreManager
+    @EnvironmentObject private var premiumManager: PremiumManager
     @State private var showingAddMedication = false
     @State private var showingEmergencyContact = false
     @State private var selectedDose: Dose?
@@ -62,14 +64,16 @@ struct TodayView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
-                        showingAddMedication = true
+                        if premiumManager.recordMedicationAdded(isPremium: storeManager.isPremium) {
+                            showingAddMedication = true
+                        }
                     } label: {
                         Image(systemName: "plus.circle.fill")
                             .font(.title2)
                             .symbolRenderingMode(.hierarchical)
                     }
                     .accessibilityLabel("Add medication")
-                    .accessibilityHint("Opens the add medication form")
+                    .accessibilityHint(storeManager.isPremium ? "Opens the add medication form" : "\(premiumManager.freeUsesRemaining) free slots remaining. Opens the add medication form")
                 }
             }
             .sheet(isPresented: $showingAddMedication) {

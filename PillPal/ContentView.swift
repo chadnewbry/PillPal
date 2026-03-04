@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject private var storeManager: StoreManager
+    @EnvironmentObject private var premiumManager: PremiumManager
     @State private var selectedTab = 0
 
     var body: some View {
@@ -34,9 +36,15 @@ struct ContentView: View {
                 .accessibilityIdentifier("tab_settings")
         }
         .tint(.accentColor)
+        .sheet(isPresented: $premiumManager.showPaywall) {
+            PaywallView()
+                .environmentObject(storeManager)
+        }
     }
 }
 
 #Preview {
     ContentView()
+        .environmentObject(StoreManager())
+        .environmentObject(PremiumManager())
 }
