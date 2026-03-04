@@ -1,0 +1,9 @@
+/* App Store Connect - Version Information */
+
+"description" = "PillPal is an accessibility-first medication tracker designed specifically for older adults. Built with seniors in mind, every screen supports VoiceOver, Dynamic Type, and large touch targets — so managing medications is simple, clear, and reliable.\n\nKEY FEATURES\n\n• Simple Medication Management — Add your medications with dosage, schedule, and notes. No clutter, no confusion.\n\n• Reliable Reminders — Never miss a dose with timely notifications. Snooze or mark as taken right from the alert.\n\n• Accessibility First — Full VoiceOver support, large text compatibility, and high-contrast UI elements designed for users with low vision or motor challenges.\n\n• At-a-Glance Tracking — See today's medications and adherence history in a clean, easy-to-read dashboard.\n\n• Family-Friendly — Designed so caregivers and family members can help set up and monitor medication schedules.\n\n• Privacy Focused — Your health data stays on your device. No accounts required, no data sold.\n\nBUILT FOR SENIORS, BY DESIGN\n\nPillPal isn't a medical app retrofitted with accessibility. It was designed from the ground up for older adults who deserve technology that works for them — not the other way around.\n\nWhether you're managing your own prescriptions or helping a loved one stay on track, PillPal makes medication adherence straightforward and stress-free.";
+
+"keywords" = "pill tracker,medication reminder,senior health,accessibility,VoiceOver,adherence,elderly,caregiver";
+
+"promotionalText" = "Accessibility-first medication tracking designed for seniors. Simple reminders, VoiceOver support, and a clean interface that puts your health first.";
+
+"supportURL" = "https://chadnewbry.github.io/PillPal/support";
