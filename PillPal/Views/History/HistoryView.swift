@@ -19,6 +19,7 @@ struct HistoryView: View {
                     .padding(.horizontal, 32)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .accessibilityIdentifier("history_view")
             .navigationTitle("History")
         }
     }
