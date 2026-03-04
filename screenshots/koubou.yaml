@@ -1,0 +1,70 @@
+# Koubou Screenshot Configuration for PillPal
+# App Store screenshots with device frames and marketing copy
+
+app:
+  name: PillPal
+  bundle_id: com.chadnewbry.PillPal
+
+defaults:
+  device_frame: iphone-15-pro
+  background:
+    type: gradient
+    direction: vertical
+    colors: ["#4A90D9", "#7BC6CC"]
+  title:
+    font_size: 58
+    font_weight: bold
+    color: "#FFFFFF"
+  subtitle:
+    font_size: 28
+    font_weight: regular
+    color: "#E8F4FD"
+  layout:
+    title_position: top
+    device_position: bottom
+    padding: 40
+
+screens:
+  - id: today_view
+    source: raw/01_today_view.png
+    title: "Your Daily Pills"
+    subtitle: "See today's medications at a glance — never miss a dose"
+    background:
+      colors: ["#4A90D9", "#7BC6CC"]
+
+  - id: week_view
+    source: raw/02_week_view.png
+    title: "Plan Your Week"
+    subtitle: "A simple weekly overview of every medication"
+    background:
+      colors: ["#5B9BD5", "#82D4BB"]
+
+  - id: history
+    source: raw/03_history.png
+    title: "Track Your Progress"
+    subtitle: "See your adherence history and stay on track"
+    background:
+      colors: ["#6C63FF", "#A78BFA"]
+
+  - id: settings
+    source: raw/04_settings.png
+    title: "Made For You"
+    subtitle: "Large text, VoiceOver, and accessibility built in"
+    background:
+      colors: ["#3B82F6", "#60A5FA"]
+
+devices:
+  - id: iphone-15-pro
+    name: iPhone 15 Pro
+    width: 1290
+    height: 2796
+
+  - id: iphone-15-pro-max
+    name: iPhone 15 Pro Max
+    width: 1320
+    height: 2868
+
+  - id: ipad-pro-13
+    name: iPad Pro 13"
+    width: 2064
+    height: 2752
