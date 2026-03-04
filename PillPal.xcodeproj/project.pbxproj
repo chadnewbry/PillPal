@@ -27,6 +27,10 @@
 		AA000121 /* TimeOfDaySectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000131; };
 		AA000122 /* MedicationCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000132; };
 		AA000123 /* AddMedicationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000133; };
+		AA000200 /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000210; };
+		AA000201 /* PremiumManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000211; };
+		AA000202 /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000212; };
+		AA000204 /* PillPalProducts.storekit in Resources */ = {isa = PBXBuildFile; fileRef = AA000213; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +55,10 @@
 		AA000131 /* TimeOfDaySectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeOfDaySectionView.swift; sourceTree = "<group>"; };
 		AA000132 /* MedicationCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationCardView.swift; sourceTree = "<group>"; };
 		AA000133 /* AddMedicationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMedicationView.swift; sourceTree = "<group>"; };
+		AA000210 /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
+		AA000211 /* PremiumManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumManager.swift; sourceTree = "<group>"; };
+		AA000212 /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
+		AA000213 /* PillPalProducts.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = PillPalProducts.storekit; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +87,7 @@
 				AA000012 /* ContentView.swift */,
 				AA000038 /* Models */,
 				AA000039 /* Persistence */,
+				AA000240 /* Store */,
 				AA000033 /* Views */,
 				AA000020 /* Assets.xcassets */,
 			);
@@ -100,6 +109,7 @@
 				AA000035 /* WeekView */,
 				AA000036 /* History */,
 				AA000037 /* Settings */,
+				AA000241 /* Paywall */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -163,6 +173,24 @@
 			path = Persistence;
 			sourceTree = "<group>";
 		};
+		AA000240 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				AA000210 /* StoreManager.swift */,
+				AA000211 /* PremiumManager.swift */,
+				AA000213 /* PillPalProducts.storekit */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		AA000241 /* Paywall */ = {
+			isa = PBXGroup;
+			children = (
+				AA000212 /* PaywallView.swift */,
+			);
+			path = Paywall;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -222,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA000007 /* Assets.xcassets in Resources */,
+				AA000204 /* PillPalProducts.storekit in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +280,9 @@
 				AA000106 /* UserSettings+Extensions.swift in Sources */,
 				AA000107 /* PersistenceController.swift in Sources */,
 				AA000108 /* MedicationDataService.swift in Sources */,
+				AA000200 /* StoreManager.swift in Sources */,
+				AA000201 /* PremiumManager.swift in Sources */,
+				AA000202 /* PaywallView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

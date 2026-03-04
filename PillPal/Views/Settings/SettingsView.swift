@@ -6,6 +6,9 @@ import SwiftUI
 struct SettingsView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @Environment(\.openURL) private var openURL
+    @EnvironmentObject private var storeManager: StoreManager
+    @EnvironmentObject private var premiumManager: PremiumManager
+    @State private var showPaywall = false
 
     // Accessibility
     @AppStorage("textSizeMultiplier") private var textSizeMultiplier: Double = 1.0
@@ -41,6 +44,7 @@ struct SettingsView: View {
     var body: some View {
         NavigationStack {
             List {
+                premiumSection
                 coreSettingsSection
                 accessibilitySection
                 medicationSettingsSection
@@ -56,6 +60,70 @@ struct SettingsView: View {
             } message: {
                 Text("This will permanently delete all medications, doses, and history. This action cannot be undone.")
             }
+        }
+    }
+
+    // MARK: - Premium
+
+    private var premiumSection: some View {
+        Section {
+            if storeManager.isPremium {
+                HStack(spacing: 12) {
+                    Image(systemName: "star.circle.fill")
+                        .font(.title2)
+                        .foregroundStyle(.yellow)
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("PillPal Premium")
+                            .font(.headline)
+                        Text("All features unlocked")
+                            .font(.subheadline)
+                            .foregroundStyle(.secondary)
+                    }
+                }
+                .accessibilityElement(children: .combine)
+                .accessibilityLabel("PillPal Premium active. All features unlocked.")
+            } else {
+                VStack(alignment: .leading, spacing: 8) {
+                    HStack(spacing: 12) {
+                        Image(systemName: "star.circle")
+                            .font(.title2)
+                            .foregroundStyle(.accent)
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text("Free Plan")
+                                .font(.headline)
+                            Text("\(premiumManager.freeUsesRemaining) medication slots remaining")
+                                .font(.subheadline)
+                                .foregroundStyle(.secondary)
+                        }
+                    }
+
+                    Button {
+                        showPaywall = true
+                    } label: {
+                        Text("Upgrade to Premium")
+                            .font(.headline)
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical, 12)
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .controlSize(.large)
+                    .accessibilityLabel("Upgrade to PillPal Premium")
+                    .accessibilityHint("Opens the upgrade screen")
+                }
+
+                Button {
+                    Task { await storeManager.restorePurchases() }
+                } label: {
+                    Label("Restore Purchase", systemImage: "arrow.clockwise")
+                }
+                .accessibilityHint("Restore a previous PillPal Premium purchase")
+            }
+        } header: {
+            Label("Subscription", systemImage: "star.fill")
+        }
+        .sheet(isPresented: $showPaywall) {
+            PaywallView()
+                .environmentObject(storeManager)
         }
     }
 
@@ -442,4 +510,6 @@ struct MedicalContactsView: View {
 #Preview {
     SettingsView()
         .environment(\.managedObjectContext, PersistenceController.preview.viewContext)
+        .environmentObject(StoreManager())
+        .environmentObject(PremiumManager())
 }
