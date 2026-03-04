@@ -1,0 +1,5 @@
+/* App Store Connect - App Information */
+
+"name" = "PillPal - Smart Medication Tracker";
+"subtitle" = "Accessible medication reminders for older adults";
+"privacyPolicyURL" = "https://chadnewbry.github.io/PillPal/privacy";

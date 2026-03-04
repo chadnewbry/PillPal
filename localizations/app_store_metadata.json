@@ -1,0 +1,31 @@
+{
+  "app": {
+    "name": "PillPal - Smart Medication Tracker",
+    "primaryCategory": "Medical",
+    "secondaryCategory": "Health & Fitness",
+    "bundleId": "com.chadnewbry.pillpal",
+    "copyright": "© 2026 Chad Newbry LLC",
+    "ageRating": {
+      "rating": "4+",
+      "medicalInfo": false,
+      "contests": false,
+      "gambling": false,
+      "violence": false,
+      "sexualContent": false,
+      "profanity": false,
+      "drugs": false,
+      "alcohol": false,
+      "horror": false,
+      "matureContent": false
+    },
+    "urls": {
+      "privacyPolicy": "https://chadnewbry.github.io/PillPal/privacy",
+      "support": "https://chadnewbry.github.io/PillPal/support",
+      "marketing": "https://chadnewbry.github.io/PillPal"
+    },
+    "availability": {
+      "priceTier": 0,
+      "territories": "all"
+    }
+  }
+}
