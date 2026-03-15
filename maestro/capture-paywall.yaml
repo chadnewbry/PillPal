@@ -1,0 +1,7 @@
+appId: com.chadnewbry.pillpal
+---
+- launchApp
+- tapOn: "Settings"
+- tapOn: "Upgrade to Premium"
+- waitForAnimationToEnd
+- takeScreenshot: paywall
