@@ -1,0 +1,36 @@
+{
+  "appName": "PillPal",
+  "theme": {
+    "backgroundColor": "#FFFFFF",
+    "headerColor": "#1C7ED6",
+    "subtitleColor": "#495057",
+    "fontFamily": "SF Pro Display"
+  },
+  "screenshots": [
+    {
+      "filename": "01-today.png",
+      "header": "Never Miss a Dose",
+      "subtitle": "Track all your medications at a glance"
+    },
+    {
+      "filename": "02-add-medication.png",
+      "header": "Easy Setup",
+      "subtitle": "Add medications in seconds"
+    },
+    {
+      "filename": "03-week.png",
+      "header": "Weekly Overview",
+      "subtitle": "See your full schedule ahead"
+    },
+    {
+      "filename": "04-history.png",
+      "header": "Track Your Progress",
+      "subtitle": "Monitor adherence over time"
+    },
+    {
+      "filename": "05-settings.png",
+      "header": "Your Way",
+      "subtitle": "Customize reminders and accessibility"
+    }
+  ]
+}

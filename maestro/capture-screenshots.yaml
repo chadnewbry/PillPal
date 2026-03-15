@@ -1,0 +1,54 @@
+appId: com.chadnewbry.pillpal
+name: "Capture App Store Screenshots"
+---
+
+# 1. Launch with clearState to seed screenshot data
+- launchApp:
+    appId: com.chadnewbry.pillpal
+    clearState: true
+    arguments:
+      - "--screenshot-mode"
+
+# 2. Relaunch without clearing so FetchRequest picks up seeded data
+- stopApp:
+    appId: com.chadnewbry.pillpal
+- launchApp:
+    appId: com.chadnewbry.pillpal
+    clearState: false
+    arguments:
+      - "--screenshot-mode"
+
+# Allow notification dialog if shown
+- runFlow:
+    when:
+      visible: "Allow"
+    commands:
+      - tapOn: "Allow"
+
+# 3. Capture screenshots
+
+# -- 01: Today tab (home) with progress and medications --
+- waitForAnimationToEnd
+- takeScreenshot: "01-today"
+
+# -- 02: Add Medication sheet --
+- tapOn: "Add medication"
+- waitForAnimationToEnd
+- takeScreenshot: "02-add-medication"
+- tapOn: "Cancel"
+- waitForAnimationToEnd
+
+# -- 03: Week view --
+- tapOn: "Week"
+- waitForAnimationToEnd
+- takeScreenshot: "03-week"
+
+# -- 04: History --
+- tapOn: "History"
+- waitForAnimationToEnd
+- takeScreenshot: "04-history"
+
+# -- 05: Settings --
+- tapOn: "Settings"
+- waitForAnimationToEnd
+- takeScreenshot: "05-settings"
