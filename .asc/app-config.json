@@ -1,0 +1,26 @@
+{
+  "app": {
+    "name": "Pill Tracker",
+    "bundleId": "com.chadnewbry.pillpal",
+    "copyright": "© 2026 Chad Newbry"
+  },
+  "urls": {
+    "website": "https://chadnewbry.github.io/pillpal",
+    "privacyPolicy": "https://chadnewbry.github.io/pillpal/privacy",
+    "termsOfService": "https://chadnewbry.github.io/pillpal/terms",
+    "support": null
+  },
+  "review": {
+    "demoAccountRequired": false,
+    "contact": {
+      "firstName": "Chad",
+      "lastName": "Newbry",
+      "email": "chad.newbry@gmail.com",
+      "phone": "+15417605021"
+    }
+  },
+  "iap": {
+    "productId": "com.chadnewbry.pillpal.premium",
+    "type": "non-consumable"
+  }
+}
